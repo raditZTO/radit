@@ -20,10 +20,19 @@
         </nav>
     </header>
  
-    <audio controls>
-        <source src="darkside.mp3.mp3" type="audio/mp3">
-        Browser Anda tidak mendukung elemen audio.
-    </audio>
+    <button id="playButton">Putar Musik</button>
+
+    <!-- Elemen audio untuk file MP3 -->
+    <audio id="audioPlayer" src="darkside.mp3.mp3"></audio>
+
+    <script>
+        // Aksi ketika tombol diklik untuk memutar MP3
+        document.getElementById("playButton").addEventListener("click", function() {
+            var audio = document.getElementById("audioPlayer");
+            audio.play();  // Memulai pemutaran MP3
+        });
+    </script>
+
 
     <main>
         <section class="hero">
